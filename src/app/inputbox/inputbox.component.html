@@ -1,0 +1,31 @@
+<div class=" d-inline mx-auto w-75 d-flex justify-content-end">
+
+
+
+<input type="text" class="form-control w-25 mt-5 " placeholder="enter the Name" (keyup)="namedisplay($event)" />
+
+
+</div>   
+<table class="table table-bordered w-75 mx-auto mt-1">
+    <thead>
+        <tr class="bg-warning">
+    
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>City</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of users">
+        
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.address.city}}</td>
+            
+        </tr>
+    </tbody>
+
+
+</table>
